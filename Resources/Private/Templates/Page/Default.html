@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+    <head>
+        <title>{node.properties.title}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <f:section name="stylesheets">
+            <link href="{f:uri.resource(path: 'css/bootstrap.min.css', package: 'Mw.OnePageAgencySite')}"
+                  rel="stylesheet">
+            <link href="{f:uri.resource(path: 'css/agency.css', package: 'Mw.OnePageAgencySite')}" rel="stylesheet">
+        </f:section>
+        <f:section name="fonts">
+            <link href="{f:uri.resource(path: 'font-awesome/css/font-awesome.min.css', package: 'Mw.OnePageAgencySite')}"
+                  rel="stylesheet" type="text/css">
+            <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+            <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+            <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+                  type='text/css'>
+            <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet'
+                  type='text/css'>
+        </f:section>
+        <f:section name="headScripts">
+            <!--[if lt IE 9]>
+            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        </f:section>
+
+    </head>
+    <f:section name="body">
+        <body id="page-top" class="index">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand page-scroll" href="#page-top">{navbarTitle}</a>
+                    </div>
+
+                    <!-- Menu -->
+                    {parts.menu -> f:format.raw()}
+
+                </div>
+            </nav>
+
+            <!-- Header -->
+            {content.header -> f:format.raw()}
+
+            <!-- Main -->
+            {content.main -> f:format.raw()}
+
+            <!-- Footer -->
+            {content.footer -> f:format.raw()}
+
+            <!-- PortfolioModals -->
+            {parts.portfolioModals -> f:format.raw()}
+
+            <f:section name="bodyScripts">
+                <!-- jQuery -->
+                <script src="{f:uri.resource(path: 'js/jquery.js', package: 'Mw.OnePageAgencySite')}"></script>
+
+                <!-- Bootstrap Core JavaScript -->
+                <script src="{f:uri.resource(path: 'js/bootstrap.min.js', package: 'Mw.OnePageAgencySite')}"></script>
+
+                <!-- Plugin JavaScript -->
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                <script src="{f:uri.resource(path: 'js/classie.js', package: 'Mw.OnePageAgencySite')}"></script>
+                <script src="{f:uri.resource(path: 'js/cbpAnimatedHeader.js', package: 'Mw.OnePageAgencySite')}"></script>
+
+                <!-- Contact Form JavaScript -->
+                <script src="{f:uri.resource(path: 'js/jqBootstrapValidation.js', package: 'Mw.OnePageAgencySite')}"></script>
+                <script src="{f:uri.resource(path: 'js/contact_me.js', package: 'Mw.OnePageAgencySite')}"></script>
+
+                <!-- Custom Theme JavaScript -->
+                <script src="{f:uri.resource(path: 'js/agency.js', package: 'Mw.OnePageAgencySite')}"></script>
+            </f:section>
+        </body>
+    </f:section>
+</html>

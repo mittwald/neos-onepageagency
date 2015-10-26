@@ -1,0 +1,17 @@
+{
+    "name": "mw/onepageagencysite",
+    "type": "typo3-flow-site",
+    "description": "One Page Agency Site",
+    "require": {
+        "typo3/neos": "2.*",
+        "typo3/neos-nodetypes": "*"
+    },
+    "suggest": {
+        "typo3/neos-seo": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mw\\OnePageAgencySite": "Classes"
+        }
+    }
+}

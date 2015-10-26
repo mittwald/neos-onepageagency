@@ -1,0 +1,8 @@
+prototype(Mw.OnePageAgencySite:Timeline) < prototype(TYPO3.Neos:Content) {
+    timelineAlignment = ${q(node).property('timelineAlignment')}
+    timelineText = ${q(node).property('timelineText')}
+    timelineHeading = ${q(node).property('timelineHeading')}
+    timelineSubHeading = ${q(node).property('timelineSubHeading')}
+    timelineNormalHeading = ${q(node).property('timelineNormalHeading')}
+    timelineImage = ${q(node).property('timelineImage')}
+}

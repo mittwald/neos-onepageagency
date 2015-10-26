@@ -1,0 +1,3 @@
+prototype(Mw.OnePageAgencySite:Text) < prototype(TYPO3.Neos:Content) {
+    text = ${q(node).property('text')}
+}

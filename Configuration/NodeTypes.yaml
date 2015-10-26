@@ -1,0 +1,810 @@
+##
+# Page settings
+##
+
+'TYPO3.Neos.NodeTypes:Page':
+  childNodes:
+    'header':
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Header': TRUE
+          '*': FALSE
+    'main':
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Section': TRUE
+          'Mw.OnePageAgencySite:Clients': TRUE
+          '*': FALSE
+    'footer':
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Footer': TRUE
+          '*': FALSE
+  ui:
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    navbarTitle:
+      type: string
+      defaultValue: 'One Page Agency'
+      ui:
+        label: 'Titel der Navigation'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+
+##
+# Section element
+##
+
+'Mw.OnePageAgencySite:Section':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    'sectioncontent':
+      type: 'TYPO3.Neos:ContentCollection'
+  ui:
+    label: 'Abschnitt'
+    icon: 'icon-adjust'
+    group: 'onepageagency'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    sectionTitle:
+      type: string
+      defaultValue: 'Titel'
+      ui:
+        label: 'Titel des Abschnitts'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    sectionAnchor:
+      type: string
+      defaultValue: 'anker'
+      ui:
+        label: 'Anker des Abschnitts'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    setDark:
+      type: boolean
+      ui:
+        label: 'Dunkler Abschnitt?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    specialCss:
+      type: string
+      ui:
+        label: 'Zusätzliche CSS-Klassen'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Bitte auswählen'
+            values:
+              '':
+                label: ''
+              contact:
+                label: 'Kontakt'
+              portfolio:
+                label: 'Portfolio'
+
+##
+# SectionHeadline element
+##
+
+'Mw.OnePageAgencySite:SectionHeadline':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Abschnittsüberschrift'
+    icon: 'icon-font'
+    group: 'onepageagency'
+  properties:
+    sectionHeading:
+      type: string
+      defaultValue: 'Überschrift'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    sectionSubHeading:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet consectetur.'
+      ui:
+        label: 'Untertitel'
+        inlineEditable: TRUE
+
+##
+# ServiceBox element
+##
+
+'Mw.OnePageAgencySite:ServiceBox':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Dienstleistung'
+    icon: 'icon-tasks'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    serviceHeading:
+      type: string
+      defaultValue: 'Webhosting'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    serviceText:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
+      ui:
+        label: 'Inhalt'
+        inlineEditable: TRUE
+    fontawesomeIcon:
+      type: string
+      defaultValue: 'fa-globe'
+      ui:
+        label: 'FontAwesome-Icon (4.2.0)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+
+##
+# Footer element
+##
+
+'Mw.OnePageAgencySite:Footer':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Fußbereich'
+    icon: 'icon-ellipsis-horizontal'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    setDark:
+      type: boolean
+      ui:
+        label: 'Dunkler Footer?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    twitterUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Twitter Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    facebookUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Facebook Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    linkedinUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'LinkedIn Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    copyright:
+      type: string
+      defaultValue: 'Copyright &copy; Mittwald CM Service 2015'
+      ui:
+        label: 'Copyright'
+        inlineEditable: TRUE
+    footerUrlDescriptionOne:
+      type: string
+      defaultValue: 'Mittwald CM Service'
+      ui:
+        label: 'Fußbereich Link-Beschreibung (1)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    footerUrlOne:
+      type: string
+      defaultValue: 'http://mittwald.de/'
+      ui:
+        label: 'Fußbereich Link (1)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    footerUrlDescriptionTwo:
+      type: string
+      defaultValue: 'Neos CMS'
+      ui:
+        label: 'Fußbereich Link-Beschreibung (2)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    footerUrlTwo:
+      type: string
+      defaultValue: 'http://neos.io/'
+      ui:
+        label: 'Fußbereich Link (2)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+
+##
+# ContactForm element
+##
+
+'Mw.OnePageAgencySite:ContactForm':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Kontaktformular'
+    icon: 'icon-envelope'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    contactName:
+      type: string
+      defaultValue: 'Dein Name *'
+      ui:
+        label: 'Name (Platzhalter)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactValidationName:
+      type: string
+      defaultValue: 'Bitte Namen eingeben!'
+      ui:
+        label: 'Name (Fehlermeldung)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactMail:
+      type: string
+      defaultValue: 'Deine E-Mail *'
+      ui:
+        label: 'E-Mail (Platzhalter)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactValidationMail:
+      type: string
+      defaultValue: 'Bitte E-Mail eingeben!'
+      ui:
+        label: 'E-Mail (Fehlermeldung)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactPhone:
+      type: string
+      defaultValue: 'Deine Telefonnummer *'
+      ui:
+        label: 'Telefonnummer (Platzhalter)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactValidationPhone:
+      type: string
+      defaultValue: 'Bitte Telefonnummer eingeben!'
+      ui:
+        label: 'Telefonnummer (Fehlermeldung)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactMessage:
+      type: string
+      defaultValue: 'Deine Nachricht *'
+      ui:
+        label: 'Nachricht (Platzhalter)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactValidationMessage:
+      type: string
+      defaultValue: 'Bitte Nachricht eingeben!'
+      ui:
+        label: 'Nachricht (Fehlermeldung)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    contactButton:
+      type: string
+      defaultValue: 'Nachricht absenden!'
+      ui:
+        label: 'Button'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+
+##
+# Header element
+##
+
+'Mw.OnePageAgencySite:Header':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    label: 'Kopfbereich'
+    icon: 'icon-th'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    leadIn:
+      type: string
+      defaultValue: "Template Demo"
+      ui:
+        label: 'Intro'
+        inlineEditable: TRUE
+    heading:
+      type: string
+      defaultValue: "One Page Agency"
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    headingButton:
+      type: string
+      defaultValue: "Mehr erfahren"
+      ui:
+        label: 'Beschriftung des Buttons'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    buttonAnchor:
+      type: string
+      defaultValue: "anker"
+      ui:
+        label: 'Anker des Buttons'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    headerImage:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Bild des Kopfbereichs'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 38
+                  height: 25
+
+##
+# Clients element
+##
+
+'Mw.OnePageAgencySite:Clients':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Kunden'
+    icon: 'icon-cogs'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    setDark:
+      type: boolean
+      ui:
+        label: 'Dunkler Hintergrund?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    clientImageOne:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Kundenbild (1)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 4
+                  height: 1
+    clientUrlOne:
+      type: string
+      defaultValue: '#'
+      ui:
+        label: 'Kundenlink (1)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    clientImageTwo:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Kundenbild (2)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 4
+                  height: 1
+    clientUrlTwo:
+      type: string
+      defaultValue: '#'
+      ui:
+        label: 'Kundenlink (2)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    clientImageThree:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Kundenbild (3)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 4
+                  height: 1
+    clientUrlThree:
+      type: string
+      defaultValue: '#'
+      ui:
+        label: 'Kundenlink (3)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    clientImageFour:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Kundenbild (4)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 4
+                  height: 1
+    clientUrlFour:
+      type: string
+      defaultValue: '#'
+      ui:
+        label: 'Kundenlink (4)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+
+##
+# TeamMember element
+##
+
+'Mw.OnePageAgencySite:TeamMember':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Mitarbeiter'
+    icon: 'icon-user'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    teammemberName:
+      type: string
+      defaultValue: 'Max Mustermann'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    teammemberPosition:
+      type: string
+      defaultValue: 'Geschäftsführer'
+      ui:
+        label: 'Text'
+        inlineEditable: TRUE
+    twitterUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Twitter Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    facebookUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Facebook Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    linkedinUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'LinkedIn Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    teamImage:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Bild des Mitarbeiters'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 1
+                  height: 1
+
+##
+# Portfolio
+##
+
+'Mw.OnePageAgencySite:Portfolio':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    'portfoliocontent':
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:PortfolioModal': TRUE
+          '*': FALSE
+  ui:
+    label: 'Portfolio'
+    icon: 'icon-file'
+    group: 'onepageagency'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    portfolioCaption:
+      type: string
+      defaultValue: "Round Icons"
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    portfolioText:
+      type: string
+      defaultValue: "Graphic Design"
+      ui:
+        label: 'Text'
+        inlineEditable: TRUE
+    portfolioImage:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Portfolio Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 400
+                  height: 289
+
+##
+# PortfolioModal element
+##
+
+'Mw.OnePageAgencySite:PortfolioModal':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Portfolio (Inhalt)'
+    icon: 'icon-indent-right'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    portfolioModalContent:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet consectetur.'
+      ui:
+        label: 'Inhalt'
+        inlineEditable: TRUE
+    portfolioModalHeading:
+      type: string
+      defaultValue: 'Überschrift'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    portfolioModalSubHeading:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet consectetur.'
+      ui:
+        label: 'Untertitel'
+        inlineEditable: TRUE
+    portfolioModalImage:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Portfolio (Inhalt) Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 300
+                  height: 407
+
+##
+# Text element
+##
+
+'Mw.OnePageAgencySite:Text':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Text'
+    icon: 'icon-bold'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    text:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.'
+      ui:
+        label: 'Inhalt'
+        inlineEditable: TRUE
+
+##
+# TimelineList element
+##
+
+'Mw.OnePageAgencySite:TimelineList':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    'timelinecontent':
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Timeline': TRUE
+          '*': FALSE
+  ui:
+    label: 'Zeitleiste (Liste)'
+    icon: 'icon-calendar-empty'
+    group: 'onepageagency'
+    inlineEditable: TRUE
+
+##
+# Timeline element
+##
+
+'Mw.OnePageAgencySite:Timeline':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Zeitleiste (Element)'
+    icon: 'icon-calendar'
+    group: 'onepageagency'
+    inspector:
+      groups:
+        onepageagencysettings:
+          label: 'One Page Agency Einstellungen'
+  properties:
+    timelineAlignment:
+      type: string
+      defaultValue: 'timelineNormal'
+      ui:
+        label: 'Ausrichtung der Zeitleiste'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Bitte auswählen'
+            values:
+              '':
+                label: ''
+              timelineNormal:
+                label: 'Anfang bzw. Ende'
+              timelineRight:
+                label: 'Rechts'
+              timelineLeft:
+                label: 'Links'
+    timelineText:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
+      ui:
+        label: 'Inhalt'
+        inlineEditable: TRUE
+    timelineHeading:
+      type: string
+      defaultValue: 'Februar 2003'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    timelineSubHeading:
+      type: string
+      defaultValue: 'Gründung'
+      ui:
+        label: 'Unterüberschrift'
+        inlineEditable: TRUE
+    timelineNormalHeading:
+      type: string
+      defaultValue: 'Mittwald<br>CM<br>Service'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+    timelineImage:
+      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+          editorOptions:
+            features:
+              crop: TRUE
+              resize: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 1
+                  height: 1

@@ -1,0 +1,11 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+        <f:for each="{items}" as="item">
+            <li class="menu-item">
+                <a class="page-scroll" href="#{item.properties.sectionAnchor}">{item.properties.sectionTitle}</a>
+            </li>
+        </f:for>
+    </ul>
+</div>

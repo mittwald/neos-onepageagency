@@ -1,0 +1,10 @@
+prototype(Mw.OnePageAgencySite:Portfolio) {
+    portfolioContent = TYPO3.Neos:ContentCollection {
+        nodePath = 'portfoliocontent'
+    }
+}
+prototype(Mw.OnePageAgencySite:Portfolio) < prototype(TYPO3.Neos:Content) {
+    portfolioCaption = ${q(node).property('portfolioCaption')}
+    portfolioText = ${q(node).property('portfolioText')}
+    portfolioImage = ${q(node).property('portfolioImage')}
+}
