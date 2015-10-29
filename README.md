@@ -17,9 +17,13 @@ Das Site-Package wurde mit Neos CMS in Version 2.x entwickelt.
 Installation
 ------------
 
+In den Root-Ordner der Neos-Installation wechseln:
+     
+     cd /var/www/your-neos
+
 Code von GitHub in den Ordner *Packages/Sites* der Neos-Installation clonen:
 
-	git clone https://github.com/mittwald/neos-onepageagency.git
+	git clone https://github.com/mittwald/neos-onepageagency.git Packages/Sites/Mw.OnePageAgencySite
     
 Anschließend müssen alle bereits vorhandenen Seiten und Inhalte entfernt werden:
     
