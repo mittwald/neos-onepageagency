@@ -1,39 +1,6 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<f:if condition="{setDark}">
-    <f:then>
-        <f:if condition="{specialCss}">
-            <f:then>
-                <section id="{sectionAnchor}" class="bg-light-gray {specialCss}">
-                    <div class="container">
-                        {sectionContent -> f:format.raw()}
-                    </div>
-                </section>
-            </f:then>
-            <f:else>
-                <section id="{sectionAnchor}" class="bg-light-gray">
-                    <div class="container">
-                        {sectionContent -> f:format.raw()}
-                    </div>
-                </section>
-            </f:else>
-        </f:if>
-    </f:then>
-    <f:else>
-        <f:if condition="{specialCss}">
-            <f:then>
-                <section id="{sectionAnchor}" class="{specialCss}">
-                    <div class="container">
-                        {sectionContent -> f:format.raw()}
-                    </div>
-                </section>
-            </f:then>
-            <f:else>
-                <section id="{sectionAnchor}">
-                    <div class="container">
-                        {sectionContent -> f:format.raw()}
-                    </div>
-                </section>
-            </f:else>
-        </f:if>
-    </f:else>
-</f:if>
+<section id="{sectionAnchor}" class="{f:if(condition: '{setDark}', then: 'bg-light-gray')} {f:if(condition: '{specialCss}', then: '{specialCss}')}">
+    <div class="container">
+        {sectionContent -> f:format.raw()}
+    </div>
+</section>

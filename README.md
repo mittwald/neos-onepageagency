@@ -23,7 +23,7 @@ In den Root-Ordner der Neos-Installation wechseln:
 
 Code von GitHub in den Ordner *Packages/Sites* der Neos-Installation clonen:
 
-	git clone https://github.com/mittwald/neos-onepageagency.git Packages/Sites/Mw.OnePageAgencySite
+     git clone https://github.com/mittwald/neos-onepageagency.git Packages/Sites/Mw.OnePageAgencySite
     
 Anschließend müssen alle bereits vorhandenen Seiten und Inhalte entfernt werden:
     

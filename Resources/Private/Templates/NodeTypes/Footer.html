@@ -1,47 +1,40 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<f:if condition="{setDark}">
-    <f:then>
-        <footer class="bg-light-gray">
-    </f:then>
-    <f:else>
-        <footer>
-    </f:else>
-</f:if>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <span class="copyright">{neos:contentElement.editable(property: 'copyright')}</span>
-        </div>
-        <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-                <f:if condition="{twitterUsername}">
-                    <li><a href="http://twitter.com/{twitterUsername}"><i class="fa fa-twitter"></i></a>
-                    </li>
-                </f:if>
+<footer class="{f:if(condition: '{setDark}', then: 'bg-light-gray')}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">{neos:contentElement.editable(property: 'copyright')}</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <f:if condition="{twitterUsername}">
+                        <li><a href="http://twitter.com/{twitterUsername}"><i class="fa fa-twitter"></i></a>
+                        </li>
+                    </f:if>
 
-                <f:if condition="{facebookUsername}">
-                    <li><a href="http://fb.me/{facebookUsername}"><i class="fa fa-facebook"></i></a>
-                    </li>
-                </f:if>
+                    <f:if condition="{facebookUsername}">
+                        <li><a href="http://fb.me/{facebookUsername}"><i class="fa fa-facebook"></i></a>
+                        </li>
+                    </f:if>
 
-                <f:if condition="{linkedinUsername}">
-                    <li><a href="http://linkedin.com/in/{linkedinUsername}"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                </f:if>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-                <f:if condition="{footerUrlOne}">
-                    <li><a href="{footerUrlOne}">{footerUrlDescriptionOne}</a>
-                    </li>
-                </f:if>
-                <f:if condition="{footerUrlTwo}">
-                    <li><a href="{footerUrlTwo}">{footerUrlDescriptionTwo}</a>
-                    </li>
-                </f:if>
-            </ul>
+                    <f:if condition="{linkedinUsername}">
+                        <li><a href="http://linkedin.com/in/{linkedinUsername}"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </f:if>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <f:if condition="{footerUrlOne}">
+                        <li><a href="{footerUrlOne}">{footerUrlDescriptionOne}</a>
+                        </li>
+                    </f:if>
+                    <f:if condition="{footerUrlTwo}">
+                        <li><a href="{footerUrlTwo}">{footerUrlDescriptionTwo}</a>
+                        </li>
+                    </f:if>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 </footer>
