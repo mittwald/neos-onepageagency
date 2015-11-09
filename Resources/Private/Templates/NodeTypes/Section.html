@@ -1,0 +1,6 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<section id="{sectionAnchor}" class="{f:if(condition: '{setDark}', then: 'bg-light-gray')} {f:if(condition: '{specialCss}', then: '{specialCss}')}">
+    <div class="container">
+        {sectionContent -> f:format.raw()}
+    </div>
+</section>

@@ -1,0 +1,11 @@
+prototype(Mw.OnePageAgencySite:Footer) < prototype(TYPO3.Neos:Content) {
+    twitterusername = ${q(node).property('twitterUsername')}
+    facebookUsername = ${q(node).property('facebookUsername')}
+    linkedinUsername = ${q(node).property('linkedinUsername')}
+    copyright = ${q(node).property('copyright')}
+    footerUrlOne = ${q(node).property('footerUrlOne')}
+    footerUrlTwo = ${q(node).property('footerUrlTwo')}
+    footerUrlDescriptionOne = ${q(node).property('footerUrlDescriptionOne')}
+    footerUrlDescriptionTwo = ${q(node).property('footerUrlDescriptionTwo')}
+    setDark = ${q(node).property('setDark')}
+}

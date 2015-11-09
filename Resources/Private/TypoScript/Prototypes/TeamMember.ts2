@@ -1,0 +1,8 @@
+prototype(Mw.OnePageAgencySite:TeamMember) < prototype(TYPO3.Neos:Content) {
+    twitterusername = ${q(node).property('twitterUsername')}
+    facebookUsername = ${q(node).property('facebookUsername')}
+    linkedinUsername = ${q(node).property('linkedinUsername')}
+    teammemberName = ${q(node).property('teammemberName')}
+    teammemberPosition = ${q(node).property('teammemberPosition')}
+    teamImage = ${q(node).property('teamImage')}
+}

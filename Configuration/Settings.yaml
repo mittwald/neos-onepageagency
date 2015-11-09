@@ -1,0 +1,13 @@
+TYPO3:
+  Neos:
+    nodeTypes:
+      groups:
+        general:
+          position: 1
+        structure:
+          position: 2
+        onepageagency:
+          label: 'One Page Agency'
+          position: 3
+        plugins:
+          position: 4

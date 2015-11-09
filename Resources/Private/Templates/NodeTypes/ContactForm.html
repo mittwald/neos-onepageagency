@@ -1,0 +1,45 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div class="row">
+    <div class="col-lg-12">
+        <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="{contactName}" id="name"
+                               required data-validation-required-message="{contactValidationName}">
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="{contactMail}"
+                               id="email" required
+                               data-validation-required-message="{contactValidationMail}">
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="{contactPhone}" id="phone"
+                               required
+                               data-validation-required-message="{contactValidationPhone}">
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                                            <textarea class="form-control" placeholder="{contactMessage}" id="message"
+                                                      required
+                                                      data-validation-required-message="{contactValidationMessage}"></textarea>
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-xl">{contactButton}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
