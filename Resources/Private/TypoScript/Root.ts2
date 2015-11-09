@@ -29,6 +29,7 @@ page = Page {
     body {
         templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
         sectionName = 'body'
+        navbarTitle = ${q(node).property('navbarTitle')}
         parts {
             // Portfolio Modals
             portfolioModals = TYPO3.TypoScript:Collection {
@@ -36,6 +37,8 @@ page = Page {
                 itemName = 'node'
                 itemRenderer = Mw.OnePageAgencySite:PortfolioModal
             }
+            // Menu
+            menu = Mw.OnePageAgencySite:Menu
         }
 
         // Content Areas

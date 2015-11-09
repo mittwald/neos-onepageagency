@@ -6,10 +6,23 @@
   childNodes:
     'header':
       type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Header': TRUE
+          '*': FALSE
     'main':
       type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Section': TRUE
+          'Mw.OnePageAgencySite:Clients': TRUE
+          '*': FALSE
     'footer':
       type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Mw.OnePageAgencySite:Footer': TRUE
+          '*': FALSE
   ui:
     inspector:
       groups:
