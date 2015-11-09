@@ -1,4 +1,0 @@
-prototype(Mw.OnePageAgencySite:SectionHeadline) < prototype(TYPO3.Neos:Content) {
-    sectionHeading = ${q(node).property('sectionHeading')}
-    sectionSubHeading = ${q(node).property('sectionSubHeading')}
-}

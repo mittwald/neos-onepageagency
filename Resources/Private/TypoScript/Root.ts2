@@ -1,66 +1,11 @@
 /**
-* Root TypoScript template for the OnePageAgency site
-*/
-
-// Include TypoScript
-include: Prototypes/*.ts2
-
+ * Root TypoScript template for the OnePageAgency site
+ */
 page = Page {
-    head {
-        // Stylesheets
-        stylesheets.site = TYPO3.TypoScript:Template {
-            templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
-            sectionName = 'stylesheets'
-        }
+	head {
+	}
 
-        // Fonts
-        stylesheets.fonts = TYPO3.TypoScript:Template {
-            templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
-            sectionName = 'fonts'
-        }
-
-        // Head JavaScript
-        javascripts.site = TYPO3.TypoScript:Template {
-            templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
-            sectionName = 'headScripts'
-        }
-    }
-
-    body {
-        templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
-        sectionName = 'body'
-        navbarTitle = ${q(node).property('navbarTitle')}
-        parts {
-            // Portfolio Modals
-            portfolioModals = TYPO3.TypoScript:Collection {
-                collection = ${q(node).find('[instanceof Mw.OnePageAgencySite:PortfolioModal]')}
-                itemName = 'node'
-                itemRenderer = Mw.OnePageAgencySite:PortfolioModal
-            }
-            // Menu
-            menu = Mw.OnePageAgencySite:Menu
-        }
-
-        // Content Areas
-        content {
-            // Header section
-            header = ContentCollection {
-                nodePath = 'header'
-            }
-            // Main section
-            main = PrimaryContent {
-                nodePath = 'main'
-            }
-            // Footer section
-            footer = ContentCollection {
-                nodePath = 'footer'
-            }
-        }
-
-        // Body JavaScript
-        javascripts.site = TYPO3.TypoScript:Template {
-            templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
-            sectionName = 'bodyScripts'
-        }
-    }
+	body {
+		templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
+	}
 }

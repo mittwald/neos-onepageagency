@@ -1,7 +1,0 @@
-prototype(Mw.OnePageAgencySite:TimelineList) {
-    timelineContent = TYPO3.Neos:ContentCollection {
-        nodePath = 'timelinecontent'
-        attributes.class = 'timeline'
-    }
-}
-prototype(Mw.OnePageAgencySite:TimelineList) < prototype(TYPO3.Neos:Content)

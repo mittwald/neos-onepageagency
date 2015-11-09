@@ -1,8 +1,0 @@
-prototype(Mw.OnePageAgencySite:PortfolioModal) < prototype(TYPO3.Neos:Content) {
-    portfolioModalContent = ${q(node).property('portfolioModalContent')}
-    portfolioModalHeading = ${q(node).property('portfolioModalHeading')}
-    portfolioModalSubHeading = ${q(node).property('portfolioModalSubHeading')}
-    portfolioModalImage = ${q(node).property('portfolioModalImage')}
-    portfolioModalButton = 'Projekt schliessen'
-    portfolioId = ${q(node).parents('[instanceof Mw.OnePageAgencySite:Portfolio]').get(0).identifier}
-}
