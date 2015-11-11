@@ -2,6 +2,8 @@ One Page Agency Site für Neos CMS
 =============================================
 
 Dieses Paket beinhaltet das im [Neos CMS E-Book](https://www.mittwald.de/neos-e-book-template-entwicklung) umgesetzte HTML5-Template *Agency* von [StartBootstrap](http://startbootstrap.com/template-overviews/agency/).
+Eine Vorschau des Site-Packages befindet sich unter folgendem [Link](http://onepageagency.mittwald-demo.de).
+
 
 Voraussetzungen
 -------------
@@ -19,11 +21,11 @@ Installation
 
 In den Root-Ordner der Neos-Installation wechseln:
      
-     cd /var/www/your-neos
+    cd /var/www/your-neos
 
 Code von GitHub in den Ordner *Packages/Sites* der Neos-Installation clonen:
 
-     git clone https://github.com/mittwald/neos-onepageagency.git Packages/Sites/Mw.OnePageAgencySite
+    git clone https://github.com/mittwald/neos-onepageagency.git Packages/Sites/Mw.OnePageAgencySite
     
 Anschließend müssen alle bereits vorhandenen Seiten und Inhalte entfernt werden:
     
@@ -43,6 +45,7 @@ Autor
 
 *Mw.OnePageAgencySite* wurde im Rahmen der [Neos CMS E-Book Serie](https://www.mittwald.de/neos-e-book-template-entwicklung) von Tobias Hüske (<t.hueske@mittwald.de>) erstellt. 
 Dankend wurde das unter der [Apache License 2.0](https://github.com/mittwald/neos-onepageagency/tree/master/Resources/Public/LICENSE) stehende HTML5-Template *Agency* von [StartBootstrap](http://startbootstrap.com/template-overviews/agency/) als Vorlage verwendet.
+
 
 Lizenz
 -------

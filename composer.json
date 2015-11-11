@@ -3,7 +3,6 @@
     "type": "typo3-flow-site",
     "description": "One Page Agency Site",
     "license": "Apache 2.0",
-    "version": "1.0.0",
     "require": {
         "typo3/neos": "2.*",
         "typo3/neos-nodetypes": "*"
