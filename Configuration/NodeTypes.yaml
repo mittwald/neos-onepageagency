@@ -208,6 +208,14 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
+    xingUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Xing Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
     copyright:
       type: string
       defaultValue: 'Copyright &copy; Mittwald CM Service 2015'
@@ -565,6 +573,14 @@
       defaultValue: 'mittwald'
       ui:
         label: 'LinkedIn Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    xingUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Xing Benutzername'
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
