@@ -15,7 +15,6 @@
 
         {neos:contentElement.editable(property: 'teammemberPosition', tag: 'p', class: 'text-muted')}
         <ul class="list-inline social-buttons">
-
             <f:if condition="{twitterUsername}">
                 <li><a href="http://twitter.com/{twitterUsername}" target="_blank"><i class="fa fa-twitter"></i></a>
                 </li>
@@ -23,6 +22,11 @@
 
             <f:if condition="{facebookUsername}">
                 <li><a href="http://fb.me/{facebookUsername}" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+            </f:if>
+
+            <f:if condition="{instagramUsername}">
+                <li><a href="https://www.instagram.com/{instagramUsername}" target="_blank"><i class="fa fa-instagram"></i></a>
                 </li>
             </f:if>
 
@@ -36,6 +40,15 @@
                 </li>
             </f:if>
 
+            <f:if condition="{githubUsername}">
+                <li><a href="https://github.com/{githubUsername}" target="_blank"><i class="fa fa-github"></i></a>
+                </li>
+            </f:if>
+
+            <f:if condition="{emailAddress}">
+                <li><a href="mailto:{emailAddress}"><i class="fa fa-envelope-o"></i></a>
+                </li>
+            </f:if>
         </ul>
     </div>
 </div>

@@ -1,8 +1,11 @@
 prototype(Mw.OnePageAgencySite:Footer) < prototype(TYPO3.Neos:Content) {
-    twitterusername = ${q(node).property('twitterUsername')}
+    twitterUsername = ${q(node).property('twitterUsername')}
     facebookUsername = ${q(node).property('facebookUsername')}
+    instagramUsername = ${q(node).property('instagramUsername')}
     linkedinUsername = ${q(node).property('linkedinUsername')}
     xingUsername = ${q(node).property('xingUsername')}
+    githubUsername = ${q(node).property('githubUsername')}
+    emailAddress = ${q(node).property('emailAddress')}
     copyright = ${q(node).property('copyright')}
     footerUrlOne = ${q(node).property('footerUrlOne')}
     footerUrlTwo = ${q(node).property('footerUrlTwo')}

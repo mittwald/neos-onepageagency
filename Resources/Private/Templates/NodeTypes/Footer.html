@@ -17,6 +17,11 @@
                         </li>
                     </f:if>
 
+                    <f:if condition="{instagramUsername}">
+                        <li><a href="https://www.instagram.com/{instagramUsername}" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </f:if>
+
                     <f:if condition="{linkedinUsername}">
                         <li><a href="http://linkedin.com/in/{linkedinUsername}" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </li>
@@ -24,6 +29,16 @@
 
                     <f:if condition="{xingUsername}">
                         <li><a href="https://www.xing.com/profile/{xingUsername}" target="_blank"><i class="fa fa-xing"></i></a>
+                        </li>
+                    </f:if>
+
+                    <f:if condition="{githubUsername}">
+                        <li><a href="https://github.com/{githubUsername}" target="_blank"><i class="fa fa-github"></i></a>
+                        </li>
+                    </f:if>
+
+                    <f:if condition="{emailAddress}">
+                        <li><a href="mailto:{emailAddress}"><i class="fa fa-envelope-o"></i></a>
                         </li>
                     </f:if>
                 </ul>

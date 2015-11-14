@@ -200,6 +200,14 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
+    instagramUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Instagram Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
     linkedinUsername:
       type: string
       defaultValue: 'mittwald'
@@ -213,6 +221,22 @@
       defaultValue: 'mittwald'
       ui:
         label: 'Xing Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    githubUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'GitHub Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    emailAddress:
+      type: string
+      defaultValue: 'opensource@mittwald.de'
+      ui:
+        label: 'E-Mail-Adresse'
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
@@ -568,6 +592,14 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
+    instagramUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'Instagram Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
     linkedinUsername:
       type: string
       defaultValue: 'mittwald'
@@ -581,6 +613,22 @@
       defaultValue: 'mittwald'
       ui:
         label: 'Xing Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    githubUsername:
+      type: string
+      defaultValue: 'mittwald'
+      ui:
+        label: 'GitHub Benutzername'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'onepageagencysettings'
+    emailAddress:
+      type: string
+      defaultValue: 'opensource@mittwald.de'
+      ui:
+        label: 'E-Mail-Adresse'
         reloadIfChanged: TRUE
         inspector:
           group: 'onepageagencysettings'
