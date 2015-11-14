@@ -8,17 +8,22 @@
             <div class="col-md-4">
                 <ul class="list-inline social-buttons">
                     <f:if condition="{twitterUsername}">
-                        <li><a href="http://twitter.com/{twitterUsername}"><i class="fa fa-twitter"></i></a>
+                        <li><a href="http://twitter.com/{twitterUsername}" target="_blank"><i class="fa fa-twitter"></i></a>
                         </li>
                     </f:if>
 
                     <f:if condition="{facebookUsername}">
-                        <li><a href="http://fb.me/{facebookUsername}"><i class="fa fa-facebook"></i></a>
+                        <li><a href="http://fb.me/{facebookUsername}" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
                     </f:if>
 
                     <f:if condition="{linkedinUsername}">
-                        <li><a href="http://linkedin.com/in/{linkedinUsername}"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="http://linkedin.com/in/{linkedinUsername}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </f:if>
+
+                    <f:if condition="{xingUsername}">
+                        <li><a href="https://www.xing.com/profile/{xingUsername}" target="_blank"><i class="fa fa-xing"></i></a>
                         </li>
                     </f:if>
                 </ul>

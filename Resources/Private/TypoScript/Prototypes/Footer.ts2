@@ -2,6 +2,7 @@ prototype(Mw.OnePageAgencySite:Footer) < prototype(TYPO3.Neos:Content) {
     twitterusername = ${q(node).property('twitterUsername')}
     facebookUsername = ${q(node).property('facebookUsername')}
     linkedinUsername = ${q(node).property('linkedinUsername')}
+    xingUsername = ${q(node).property('xingUsername')}
     copyright = ${q(node).property('copyright')}
     footerUrlOne = ${q(node).property('footerUrlOne')}
     footerUrlTwo = ${q(node).property('footerUrlTwo')}
