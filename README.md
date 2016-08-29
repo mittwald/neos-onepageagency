@@ -35,6 +35,10 @@ Vor Import des Site-Packages empfiehlt es sich noch einmal den Cache zu löschen
     
     rm -rf Data/Temporary/*
     
+Zur korrekten Erkennung des Packages muss noch ein Rescan durchgeführt werden:
+    
+    ./flow flow:package:rescan
+    
 Zum Schluss wird dann das zuvor geclonte Site-Package importiert:
     
     ./flow site:import Mw.OnePageAgencySite
