@@ -26,6 +26,11 @@ page = Page {
         }
     }
 
+	bodyTag {
+        attributes.class = 'index'
+        attributes.id = 'page-top'
+    }
+	
     body {
         templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
         sectionName = 'body'
