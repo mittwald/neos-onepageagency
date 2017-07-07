@@ -1,4 +1,4 @@
-prototype(Mw.OnePageAgencySite:Footer) < prototype(TYPO3.Neos:Content) {
+prototype(Mw.OnePageAgencySite:Footer) < prototype(Neos.Neos:Content) {
     twitterUsername = ${q(node).property('twitterUsername')}
     facebookUsername = ${q(node).property('facebookUsername')}
     instagramUsername = ${q(node).property('instagramUsername')}

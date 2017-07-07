@@ -1,4 +1,4 @@
-prototype(Mw.OnePageAgencySite:ServiceBox) < prototype(TYPO3.Neos:Content) {
+prototype(Mw.OnePageAgencySite:ServiceBox) < prototype(Neos.Neos:Content) {
     fontawesomeIcon = ${q(node).property('fontawesomeIcon')}
     serviceHeading = ${q(node).property('serviceHeading')}
     serviceText = ${q(node).property('serviceText')}

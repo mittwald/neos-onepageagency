@@ -1,9 +1,9 @@
 prototype(Mw.OnePageAgencySite:Section) {
-    sectionContent = TYPO3.Neos:ContentCollection {
+    sectionContent = Neos.Neos:ContentCollection {
         nodePath = 'sectioncontent'
     }
 }
-prototype(Mw.OnePageAgencySite:Section) < prototype(TYPO3.Neos:Content) {
+prototype(Mw.OnePageAgencySite:Section) < prototype(Neos.Neos:Content) {
     setDark = ${q(node).property('setDark')}
     sectionAnchor = ${q(node).property('sectionAnchor')}
     specialCss = ${q(node).property('specialCss')}

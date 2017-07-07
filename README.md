@@ -8,10 +8,10 @@ Eine Vorschau des Site-Packages befindet sich unter folgendem [Link](http://onep
 Voraussetzungen
 -------------
 
-Das Site-Package wurde mit Neos CMS in Version 2.x entwickelt.
+Das Site-Package wurde mit Neos CMS in Version 3.x entwickelt.
 
     "require": {
-        "typo3/neos": "2.*",
+        "typo3/neos": "3.*",
         "typo3/neos-nodetypes": "*"
     }
 

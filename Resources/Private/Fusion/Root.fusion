@@ -1,26 +1,26 @@
 /**
-* Root TypoScript template for the OnePageAgency site
+* Root Fusion template for the OnePageAgency site
 */
 
-// Include TypoScript
-include: Prototypes/*.ts2
+// Include Fusion
+include: Prototypes/*.fusion
 
 page = Page {
     head {
         // Stylesheets
-        stylesheets.site = TYPO3.TypoScript:Template {
+        stylesheets.site = Neos.Fusion:Template {
             templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
             sectionName = 'stylesheets'
         }
 
         // Fonts
-        stylesheets.fonts = TYPO3.TypoScript:Template {
+        stylesheets.fonts = Neos.Fusion:Template {
             templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
             sectionName = 'fonts'
         }
 
         // Head JavaScript
-        javascripts.site = TYPO3.TypoScript:Template {
+        javascripts.site = Neos.Fusion:Template {
             templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
             sectionName = 'headScripts'
         }
@@ -37,7 +37,7 @@ page = Page {
         navbarTitle = ${q(node).property('navbarTitle')}
         parts {
             // Portfolio Modals
-            portfolioModals = TYPO3.TypoScript:Collection {
+            portfolioModals = Neos.Fusion:Collection {
                 collection = ${q(node).find('[instanceof Mw.OnePageAgencySite:PortfolioModal]')}
                 itemName = 'node'
                 itemRenderer = Mw.OnePageAgencySite:PortfolioModal
@@ -63,7 +63,7 @@ page = Page {
         }
 
         // Body JavaScript
-        javascripts.site = TYPO3.TypoScript:Template {
+        javascripts.site = Neos.Fusion:Template {
             templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/Page/Default.html'
             sectionName = 'bodyScripts'
         }
