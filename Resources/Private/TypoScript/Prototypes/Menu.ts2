@@ -1,5 +1,0 @@
-prototype(Mw.OnePageAgencySite:Menu) < prototype(TYPO3.TypoScript:Template) {
-    items = ${q(node).find('[instanceof Mw.OnePageAgencySite:Section][sectionAnchor != ""]')}
-    templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/TypoScriptObjects/Menu.html'
-    sectionTitle = ${q(node).property('sectionTitle')}
-}

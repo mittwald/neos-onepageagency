@@ -1,4 +1,4 @@
-{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
 <aside class="{f:if(condition: '{setDark}', then: 'clients bg-light-gray', else: 'clients')}">
     <div class="container">
         <div class="row">
@@ -7,7 +7,7 @@
                     <f:if condition="{clientImageOne}">
                         <f:then>
                             <img class="img-responsive img-centered"
-                                 src="{typo3.media:uri.image(asset: node.properties.clientImageOne, maximumWidth: 200, maximumHeight: 50)}"
+                                 src="{neos.media:uri.image(image: node.properties.clientImageOne, maximumWidth: 200, maximumHeight: 50)}"
                                  alt="">
                         </f:then>
                         <f:else>
@@ -22,7 +22,7 @@
                     <f:if condition="{clientImageTwo}">
                         <f:then>
                             <img class="img-responsive img-centered"
-                                 src="{typo3.media:uri.image(asset: node.properties.clientImageTwo, maximumWidth: 200, maximumHeight: 50)}"
+                                 src="{neos.media:uri.image(image: node.properties.clientImageTwo, maximumWidth: 200, maximumHeight: 50)}"
                                  alt="">
                         </f:then>
                         <f:else>
@@ -37,7 +37,7 @@
                     <f:if condition="{clientImageThree}">
                         <f:then>
                             <img class="img-responsive img-centered"
-                                 src="{typo3.media:uri.image(asset: node.properties.clientImageThree, maximumWidth: 200, maximumHeight: 50)}"
+                                 src="{neos.media:uri.image(image: node.properties.clientImageThree, maximumWidth: 200, maximumHeight: 50)}"
                                  alt="">
                         </f:then>
                         <f:else>
@@ -52,7 +52,7 @@
                     <f:if condition="{clientImageFour}">
                         <f:then>
                             <img class="img-responsive img-centered"
-                                 src="{typo3.media:uri.image(asset: node.properties.clientImageFour, maximumWidth: 200, maximumHeight: 50)}"
+                                 src="{neos.media:uri.image(image: node.properties.clientImageFour, maximumWidth: 200, maximumHeight: 50)}"
                                  alt="">
                         </f:then>
                         <f:else>

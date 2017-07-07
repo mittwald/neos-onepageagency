@@ -1,4 +1,4 @@
-prototype(Mw.OnePageAgencySite:ContactForm) < prototype(TYPO3.Neos:Content) {
+prototype(Mw.OnePageAgencySite:ContactForm) < prototype(Neos.Neos:Content) {
     contactName = ${q(node).property('contactName')}
     contactValidationName = ${q(node).property('contactValidationName')}
     contactMail = ${q(node).property('contactMail')}

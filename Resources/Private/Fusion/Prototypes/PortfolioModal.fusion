@@ -1,4 +1,4 @@
-prototype(Mw.OnePageAgencySite:PortfolioModal) < prototype(TYPO3.Neos:Content) {
+prototype(Mw.OnePageAgencySite:PortfolioModal) < prototype(Neos.Neos:Content) {
     portfolioModalContent = ${q(node).property('portfolioModalContent')}
     portfolioModalHeading = ${q(node).property('portfolioModalHeading')}
     portfolioModalSubHeading = ${q(node).property('portfolioModalSubHeading')}
