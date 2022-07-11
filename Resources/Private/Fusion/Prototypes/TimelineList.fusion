@@ -1,7 +1,8 @@
-prototype(Mw.OnePageAgencySite:TimelineList) {
-    timelineContent = Neos.Neos:ContentCollection {
-        nodePath = 'timelinecontent'
-        attributes.class = 'timeline'
-    }
+prototype(Mw.OnePageAgencySite:TimelineList) < prototype(Neos.Neos:Content) {
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/TimelineList.html'
+
+  timelineContent = Neos.Neos:ContentCollection {
+    nodePath = 'timelinecontent'
+    attributes.class = 'timeline'
+  }
 }
-prototype(Mw.OnePageAgencySite:TimelineList) < prototype(Neos.Neos:Content)

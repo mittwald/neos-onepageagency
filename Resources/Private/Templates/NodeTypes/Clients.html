@@ -1,67 +1,67 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <aside class="{f:if(condition: '{setDark}', then: 'clients bg-light-gray', else: 'clients')}">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <a href="{clientUrlOne}">
-                    <f:if condition="{clientImageOne}">
-                        <f:then>
-                            <img class="img-responsive img-centered"
-                                 src="{neos.media:uri.image(image: node.properties.clientImageOne, maximumWidth: 200, maximumHeight: 50)}"
-                                 alt="">
-                        </f:then>
-                        <f:else>
-                            <img src="http://placehold.it/200x50"
-                                 class="img-responsive img-centered" alt="">
-                        </f:else>
-                    </f:if>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="{clientUrlTwo}">
-                    <f:if condition="{clientImageTwo}">
-                        <f:then>
-                            <img class="img-responsive img-centered"
-                                 src="{neos.media:uri.image(image: node.properties.clientImageTwo, maximumWidth: 200, maximumHeight: 50)}"
-                                 alt="">
-                        </f:then>
-                        <f:else>
-                            <img src="http://placehold.it/200x50"
-                                 class="img-responsive img-centered" alt="">
-                        </f:else>
-                    </f:if>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="{clientUrlThree}">
-                    <f:if condition="{clientImageThree}">
-                        <f:then>
-                            <img class="img-responsive img-centered"
-                                 src="{neos.media:uri.image(image: node.properties.clientImageThree, maximumWidth: 200, maximumHeight: 50)}"
-                                 alt="">
-                        </f:then>
-                        <f:else>
-                            <img src="http://placehold.it/200x50"
-                                 class="img-responsive img-centered" alt="">
-                        </f:else>
-                    </f:if>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="{clientUrlFour}">
-                    <f:if condition="{clientImageFour}">
-                        <f:then>
-                            <img class="img-responsive img-centered"
-                                 src="{neos.media:uri.image(image: node.properties.clientImageFour, maximumWidth: 200, maximumHeight: 50)}"
-                                 alt="">
-                        </f:then>
-                        <f:else>
-                            <img src="http://placehold.it/200x50"
-                                 class="img-responsive img-centered" alt="">
-                        </f:else>
-                    </f:if>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<a href="{clientUrlOne}">
+					<f:if condition="{clientImageOne}">
+						<f:then>
+							<img class="img-responsive img-centered"
+									 src="{neos.media:uri.image(image: node.properties.clientImageOne, maximumWidth: 200, maximumHeight: 50)}"
+									 alt="">
+						</f:then>
+						<f:else>
+							<img src="http://placehold.it/200x50"
+									 class="img-responsive img-centered" alt="">
+						</f:else>
+					</f:if>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<a href="{clientUrlTwo}">
+					<f:if condition="{clientImageTwo}">
+						<f:then>
+							<img class="img-responsive img-centered"
+									 src="{neos.media:uri.image(image: node.properties.clientImageTwo, maximumWidth: 200, maximumHeight: 50)}"
+									 alt="">
+						</f:then>
+						<f:else>
+							<img src="http://placehold.it/200x50"
+									 class="img-responsive img-centered" alt="">
+						</f:else>
+					</f:if>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<a href="{clientUrlThree}">
+					<f:if condition="{clientImageThree}">
+						<f:then>
+							<img class="img-responsive img-centered"
+									 src="{neos.media:uri.image(image: node.properties.clientImageThree, maximumWidth: 200, maximumHeight: 50)}"
+									 alt="">
+						</f:then>
+						<f:else>
+							<img src="http://placehold.it/200x50"
+									 class="img-responsive img-centered" alt="">
+						</f:else>
+					</f:if>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<a href="{clientUrlFour}">
+					<f:if condition="{clientImageFour}">
+						<f:then>
+							<img class="img-responsive img-centered"
+									 src="{neos.media:uri.image(image: node.properties.clientImageFour, maximumWidth: 200, maximumHeight: 50)}"
+									 alt="">
+						</f:then>
+						<f:else>
+							<img src="http://placehold.it/200x50"
+									 class="img-responsive img-centered" alt="">
+						</f:else>
+					</f:if>
+				</a>
+			</div>
+		</div>
+	</div>
 </aside>

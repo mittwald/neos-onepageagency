@@ -2,7 +2,10 @@
 # Page settings
 ##
 
-'Neos.NodeTypes:Page':
+'Mw.OnePageAgencySite:Page':
+  abstract: false
+  superTypes:
+    'Neos.NodeTypes:Page': true
   childNodes:
     header:
       type: 'Neos.Neos:ContentCollection'
@@ -37,6 +40,7 @@
         reloadIfChanged: true
         inspector:
           group: onepageagencysettings
+
 'Mw.OnePageAgencySite:Section':
   superTypes:
     'Neos.Neos:Content': true
@@ -93,6 +97,7 @@
                 label: Kontakt
               portfolio:
                 label: Portfolio
+
 'Mw.OnePageAgencySite:SectionHeadline':
   superTypes:
     'Neos.Neos:Content': true
@@ -113,6 +118,7 @@
       ui:
         label: Untertitel
         inlineEditable: true
+
 'Mw.OnePageAgencySite:ServiceBox':
   superTypes:
     'Neos.Neos:Content': true
@@ -145,6 +151,7 @@
         reloadIfChanged: true
         inspector:
           group: onepageagencysettings
+
 'Mw.OnePageAgencySite:Footer':
   superTypes:
     'Neos.Neos:Content': true
@@ -258,6 +265,7 @@
         reloadIfChanged: true
         inspector:
           group: onepageagencysettings
+
 'Mw.OnePageAgencySite:ContactForm':
   superTypes:
     'Neos.Neos:Content': true
@@ -342,6 +350,7 @@
         reloadIfChanged: true
         inspector:
           group: onepageagencysettings
+
 'Mw.OnePageAgencySite:Header':
   superTypes:
     'Neos.Neos:Content': true
@@ -398,6 +407,7 @@
                 locked:
                   width: 38
                   height: 25
+
 'Mw.OnePageAgencySite:Clients':
   superTypes:
     'Neos.Neos:Content': true
@@ -513,6 +523,7 @@
         reloadIfChanged: true
         inspector:
           group: onepageagencysettings
+
 'Mw.OnePageAgencySite:TeamMember':
   superTypes:
     'Neos.Neos:Content': true
@@ -609,6 +620,7 @@
                 locked:
                   width: 1
                   height: 1
+
 'Mw.OnePageAgencySite:Portfolio':
   superTypes:
     'Neos.Neos:Content': true
@@ -657,6 +669,7 @@
                 locked:
                   width: 400
                   height: 289
+
 'Mw.OnePageAgencySite:PortfolioModal':
   superTypes:
     'Neos.Neos:Content': true
@@ -703,6 +716,7 @@
                 locked:
                   width: 300
                   height: 407
+
 'Mw.OnePageAgencySite:Text':
   superTypes:
     'Neos.Neos:Content': true
@@ -736,6 +750,7 @@
     icon: icon-calendar-empty
     group: onepageagency
     inlineEditable: true
+
 'Mw.OnePageAgencySite:Timeline':
   superTypes:
     'Neos.Neos:Content': true

@@ -1,25 +1,25 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <div class="col-md-4 col-sm-6 portfolio-item">
-    <a data-toggle="modal" class="portfolio-link" href="#portfolio-{node.identifier}">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <f:if condition="{portfolioImage}">
-            <f:then>
-                <img src="{neos.media:uri.image(image: node.properties.portfolioImage, maximumWidth: 400, maximumHeight: 289)}"
-                     class="img-responsive" alt="">
-            </f:then>
-            <f:else>
-                <img src="http://placehold.it/400x289"
-                     class="img-responsive" alt="">
-            </f:else>
-        </f:if>
-    </a>
+	<a data-toggle="modal" class="portfolio-link" href="#portfolio-{node.identifier}">
+		<div class="portfolio-hover">
+			<div class="portfolio-hover-content">
+				<i class="fa fa-plus fa-3x"></i>
+			</div>
+		</div>
+		<f:if condition="{portfolioImage}">
+			<f:then>
+				<img src="{neos.media:uri.image(image: node.properties.portfolioImage, maximumWidth: 400, maximumHeight: 289)}"
+						 class="img-responsive" alt="">
+			</f:then>
+			<f:else>
+				<img src="http://placehold.it/400x289"
+						 class="img-responsive" alt="">
+			</f:else>
+		</f:if>
+	</a>
 
-    <div class="portfolio-caption">
-        {neos:contentElement.editable(property: 'portfolioCaption', tag: 'h4')}
-        {neos:contentElement.editable(property: 'portfolioText', tag: 'p', class: 'text-muted')}
-    </div>
+	<div class="portfolio-caption">
+		{neos:contentElement.editable(property: 'portfolioCaption', tag: 'h4')}
+		{neos:contentElement.editable(property: 'portfolioText', tag: 'p', class: 'text-muted')}
+	</div>
 </div>

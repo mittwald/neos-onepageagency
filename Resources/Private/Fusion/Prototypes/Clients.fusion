@@ -1,11 +1,13 @@
 prototype(Mw.OnePageAgencySite:Clients) < prototype(Neos.Neos:Content) {
-    setDark = ${q(node).property('setDark')}
-    clientImageOne = ${q(node).property('clientImageOne')}
-    clientImageTwo = ${q(node).property('clientImageTwo')}
-    clientImageThree = ${q(node).property('clientImageThree')}
-    clientImageFour = ${q(node).property('clientImageFour')}
-    clientUrlOne = ${q(node).property('clientUrlOne')}
-    clientUrlTwo = ${q(node).property('clientUrlTwo')}
-    clientUrlThree = ${q(node).property('clientUrlThree')}
-    clientUrlFour = ${q(node).property('clientUrlFour')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/Clients.html'
+
+  setDark = ${q(node).property('setDark')}
+  clientImageOne = ${q(node).property('clientImageOne')}
+  clientImageTwo = ${q(node).property('clientImageTwo')}
+  clientImageThree = ${q(node).property('clientImageThree')}
+  clientImageFour = ${q(node).property('clientImageFour')}
+  clientUrlOne = ${q(node).property('clientUrlOne')}
+  clientUrlTwo = ${q(node).property('clientUrlTwo')}
+  clientUrlThree = ${q(node).property('clientUrlThree')}
+  clientUrlFour = ${q(node).property('clientUrlFour')}
 }

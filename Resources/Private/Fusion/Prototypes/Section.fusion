@@ -1,11 +1,12 @@
-prototype(Mw.OnePageAgencySite:Section) {
-    sectionContent = Neos.Neos:ContentCollection {
-        nodePath = 'sectioncontent'
-    }
-}
 prototype(Mw.OnePageAgencySite:Section) < prototype(Neos.Neos:Content) {
-    setDark = ${q(node).property('setDark')}
-    sectionAnchor = ${q(node).property('sectionAnchor')}
-    specialCss = ${q(node).property('specialCss')}
-    sectionTitle = ${q(node).property('sectionTitle')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/Section.html'
+
+  setDark = ${q(node).property('setDark')}
+  sectionAnchor = ${q(node).property('sectionAnchor')}
+  specialCss = ${q(node).property('specialCss')}
+  sectionTitle = ${q(node).property('sectionTitle')}
+
+  sectionContent = Neos.Neos:ContentCollection {
+    nodePath = 'sectioncontent'
+  }
 }
