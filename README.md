@@ -34,6 +34,9 @@ Beispiel wie es dann aussehen könnte:
       }
     },
 
+require package:
+
+    composer require mw/onepageagencysite
 
 Composer update ausführen:
 
