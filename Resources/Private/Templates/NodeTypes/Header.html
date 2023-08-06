@@ -1,18 +1,19 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <f:if condition="{headerImage}">
-    <f:then>
-        <header style="background-image: url('{neos.media:uri.image(image: node.properties.headerImage, maximumWidth: 1900, maximumHeight: 1250)}')">
-    </f:then>
-    <f:else>
-        <header style="background-image: url('http://placehold.it/1900x1250?text=+')">
-    </f:else>
+	<f:then>
+		<header
+			style="background-image: url('{neos.media:uri.image(image: node.properties.headerImage, maximumWidth: 1900, maximumHeight: 1250)}')">
+	</f:then>
+	<f:else>
+		<header style="background-image: url('http://placehold.it/1900x1250?text=+')">
+	</f:else>
 </f:if>
 <div class="container">
-    <div class="intro-text">
-        {neos:contentElement.editable(property: 'leadIn', class: 'intro-lead-in')}
-        {neos:contentElement.editable(property: 'heading', class: 'intro-heading')}
-        <a class="page-scroll btn btn-xl"
-           href="#{buttonAnchor}">{headingButton}</a>
-    </div>
+	<div class="intro-text">
+		{neos:contentElement.editable(property: 'leadIn', class: 'intro-lead-in')}
+		{neos:contentElement.editable(property: 'heading', class: 'intro-heading')}
+		<a class="page-scroll btn btn-xl"
+			 href="#{buttonAnchor}">{headingButton}</a>
+	</div>
 </div>
 </header>

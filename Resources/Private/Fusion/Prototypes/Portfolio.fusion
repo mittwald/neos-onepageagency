@@ -1,10 +1,11 @@
-prototype(Mw.OnePageAgencySite:Portfolio) {
-    portfolioContent = Neos.Neos:ContentCollection {
-        nodePath = 'portfoliocontent'
-    }
-}
 prototype(Mw.OnePageAgencySite:Portfolio) < prototype(Neos.Neos:Content) {
-    portfolioCaption = ${q(node).property('portfolioCaption')}
-    portfolioText = ${q(node).property('portfolioText')}
-    portfolioImage = ${q(node).property('portfolioImage')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/Portfolio.html'
+
+  portfolioCaption = ${q(node).property('portfolioCaption')}
+  portfolioText = ${q(node).property('portfolioText')}
+  portfolioImage = ${q(node).property('portfolioImage')}
+
+  portfolioContent = Neos.Neos:ContentCollection {
+    nodePath = 'portfoliocontent'
+  }
 }

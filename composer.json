@@ -4,15 +4,15 @@
     "description": "One Page Agency Site",
     "license": "Apache 2.0",
     "require": {
-        "neos/neos": "~3.*",
-        "neos/nodetypes": "~3.*"
+        "neos/neos": "^7.0.0|^8.0.0",
+        "neos/nodetypes": "^7.0.0|^8.0.0"
     },
     "suggest": {
         "neos/neos-seo": "*"
     },
     "autoload": {
         "psr-4": {
-            "Mw\\OnePageAgencySite": "Classes"
+            "Mw\\OnePageAgencySite\\": "Classes"
         }
     },
     "extra": {

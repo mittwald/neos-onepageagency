@@ -1,54 +1,54 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <div class="col-sm-4">
-    <div class="team-member">
-        <f:if condition="{teamImage}">
-            <f:then>
-                <img src="{neos.media:uri.image(image: node.properties.teamImage, maximumWidth: 225, maximumHeight: 225)}"
-                     class="img-responsive img-circle" alt="">
-            </f:then>
-            <f:else>
-                <img src="http://placehold.it/225x225"
-                     class="img-responsive img-circle" alt="">
-            </f:else>
-        </f:if>
-        {neos:contentElement.editable(property: 'teammemberName', tag: 'h4')}
+	<div class="team-member">
+		<f:if condition="{teamImage}">
+			<f:then>
+				<img src="{neos.media:uri.image(image: node.properties.teamImage, maximumWidth: 225, maximumHeight: 225)}"
+						 class="img-responsive img-circle" alt="">
+			</f:then>
+			<f:else>
+				<img src="http://placehold.it/225x225"
+						 class="img-responsive img-circle" alt="">
+			</f:else>
+		</f:if>
+		{neos:contentElement.editable(property: 'teammemberName', tag: 'h4')}
 
-        {neos:contentElement.editable(property: 'teammemberPosition', tag: 'p', class: 'text-muted')}
-        <ul class="list-inline social-buttons">
-            <f:if condition="{twitterUsername}">
-                <li><a href="http://twitter.com/{twitterUsername}" target="_blank"><i class="fa fa-twitter"></i></a>
-                </li>
-            </f:if>
+		{neos:contentElement.editable(property: 'teammemberPosition', tag: 'p', class: 'text-muted')}
+		<ul class="list-inline social-buttons">
+			<f:if condition="{twitterUsername}">
+				<li><a href="http://twitter.com/{twitterUsername}" target="_blank"><i class="fa fa-twitter"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{facebookUsername}">
-                <li><a href="http://fb.me/{facebookUsername}" target="_blank"><i class="fa fa-facebook"></i></a>
-                </li>
-            </f:if>
+			<f:if condition="{facebookUsername}">
+				<li><a href="http://fb.me/{facebookUsername}" target="_blank"><i class="fa fa-facebook"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{instagramUsername}">
-                <li><a href="https://www.instagram.com/{instagramUsername}" target="_blank"><i class="fa fa-instagram"></i></a>
-                </li>
-            </f:if>
+			<f:if condition="{instagramUsername}">
+				<li><a href="https://www.instagram.com/{instagramUsername}" target="_blank"><i class="fa fa-instagram"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{linkedinUsername}">
-                <li><a href="http://linkedin.com/in/{linkedinUsername}" target="_blank"><i class="fa fa-linkedin"></i></a>
-                </li>
-            </f:if>
+			<f:if condition="{linkedinUsername}">
+				<li><a href="http://linkedin.com/in/{linkedinUsername}" target="_blank"><i class="fa fa-linkedin"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{xingUsername}">
-                <li><a href="https://www.xing.com/profile/{xingUsername}" target="_blank"><i class="fa fa-xing"></i></a>
-                </li>
-            </f:if>
+			<f:if condition="{xingUsername}">
+				<li><a href="https://www.xing.com/profile/{xingUsername}" target="_blank"><i class="fa fa-xing"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{githubUsername}">
-                <li><a href="https://github.com/{githubUsername}" target="_blank"><i class="fa fa-github"></i></a>
-                </li>
-            </f:if>
+			<f:if condition="{githubUsername}">
+				<li><a href="https://github.com/{githubUsername}" target="_blank"><i class="fa fa-github"></i></a>
+				</li>
+			</f:if>
 
-            <f:if condition="{emailAddress}">
-                <li><a href="mailto:{emailAddress}"><i class="fa fa-envelope-o"></i></a>
-                </li>
-            </f:if>
-        </ul>
-    </div>
+			<f:if condition="{emailAddress}">
+				<li><a href="mailto:{emailAddress}"><i class="fa fa-envelope-o"></i></a>
+				</li>
+			</f:if>
+		</ul>
+	</div>
 </div>

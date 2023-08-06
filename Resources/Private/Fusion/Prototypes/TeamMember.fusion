@@ -1,12 +1,14 @@
 prototype(Mw.OnePageAgencySite:TeamMember) < prototype(Neos.Neos:Content) {
-    twitterUsername = ${q(node).property('twitterUsername')}
-    facebookUsername = ${q(node).property('facebookUsername')}
-    instagramUsername = ${q(node).property('instagramUsername')}
-    linkedinUsername = ${q(node).property('linkedinUsername')}
-    xingUsername = ${q(node).property('xingUsername')}
-    githubUsername = ${q(node).property('githubUsername')}
-    emailAddress = ${q(node).property('emailAddress')}
-    teammemberName = ${q(node).property('teammemberName')}
-    teammemberPosition = ${q(node).property('teammemberPosition')}
-    teamImage = ${q(node).property('teamImage')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/TeamMember.html'
+
+  twitterUsername = ${q(node).property('twitterUsername')}
+  facebookUsername = ${q(node).property('facebookUsername')}
+  instagramUsername = ${q(node).property('instagramUsername')}
+  linkedinUsername = ${q(node).property('linkedinUsername')}
+  xingUsername = ${q(node).property('xingUsername')}
+  githubUsername = ${q(node).property('githubUsername')}
+  emailAddress = ${q(node).property('emailAddress')}
+  teammemberName = ${q(node).property('teammemberName')}
+  teammemberPosition = ${q(node).property('teammemberPosition')}
+  teamImage = ${q(node).property('teamImage')}
 }

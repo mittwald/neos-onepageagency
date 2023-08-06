@@ -1,3 +1,5 @@
 prototype(Mw.OnePageAgencySite:Text) < prototype(Neos.Neos:Content) {
-    text = ${q(node).property('text')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/Text.html'
+
+  text = ${q(node).property('text')}
 }

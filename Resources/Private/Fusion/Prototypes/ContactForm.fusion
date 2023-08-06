@@ -1,11 +1,13 @@
 prototype(Mw.OnePageAgencySite:ContactForm) < prototype(Neos.Neos:Content) {
-    contactName = ${q(node).property('contactName')}
-    contactValidationName = ${q(node).property('contactValidationName')}
-    contactMail = ${q(node).property('contactMail')}
-    contactValidationMail = ${q(node).property('contactValidationMail')}
-    contactPhone = ${q(node).property('contactPhone')}
-    contactValidationPhone = ${q(node).property('contactValidationPhone')}
-    contactMessage = ${q(node).property('contactMessage')}
-    contactValidationMessage = ${q(node).property('contactValidationMessage')}
-    contactButton = ${q(node).property('contactButton')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/ContactForm.html'
+
+  contactName = ${q(node).property('contactName')}
+  contactValidationName = ${q(node).property('contactValidationName')}
+  contactMail = ${q(node).property('contactMail')}
+  contactValidationMail = ${q(node).property('contactValidationMail')}
+  contactPhone = ${q(node).property('contactPhone')}
+  contactValidationPhone = ${q(node).property('contactValidationPhone')}
+  contactMessage = ${q(node).property('contactMessage')}
+  contactValidationMessage = ${q(node).property('contactValidationMessage')}
+  contactButton = ${q(node).property('contactButton')}
 }

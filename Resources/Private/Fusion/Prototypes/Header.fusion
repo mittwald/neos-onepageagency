@@ -1,7 +1,9 @@
 prototype(Mw.OnePageAgencySite:Header) < prototype(Neos.Neos:Content) {
-    leadIn = ${q(node).property('leadIn')}
-    heading = ${q(node).property('heading')}
-    headingButton = ${q(node).property('headingButton')}
-    buttonAnchor = ${q(node).property('buttonAnchor')}
-    headerImage = ${q(node).property('headerImage')}
+  templatePath = 'resource://Mw.OnePageAgencySite/Private/Templates/NodeTypes/Header.html'
+
+  leadIn = ${q(node).property('leadIn')}
+  heading = ${q(node).property('heading')}
+  headingButton = ${q(node).property('headingButton')}
+  buttonAnchor = ${q(node).property('buttonAnchor')}
+  headerImage = ${q(node).property('headerImage')}
 }
